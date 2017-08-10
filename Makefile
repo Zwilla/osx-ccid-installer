@@ -11,7 +11,7 @@ export PKG_CONFIG_PATH
 
 # SIGNER ?= Martin Paljak
 ifneq ($(strip $(SIGNER)),)
-  PKGSIGN = --sign "Developer ID Installer: $(SIGNER)"
+  PKGSIGN = --sign "$(SIGNER)"
 endif
 
 .PHONY: default clean
@@ -49,7 +49,7 @@ srcdist:
 	mv CCID/ccid-*.tar.gz $(CCIDVER).tar.gz
 
 ifd-ccid.pkg: $(BUNDLE)
-	test -z "$(SIGNER)" || codesign -f -s "Developer ID Application: $(SIGNER)" $(BUNDLE)
+	test -z "$(SIGNER)" || codesign -f -s "$(SIGNER)" $(BUNDLE)
 	pkgbuild --root $(TARGET) --scripts scripts --identifier org.openkms.mac.ccid --version $(CCIDVER) --install-location / --ownership recommended $@
 
 ccid-installer.pkg: ifd-ccid.pkg
@@ -60,4 +60,4 @@ uninstall.pkg: uninstaller-scripts/postinstall
 
 ccid-installer.dmg: ccid-installer.pkg uninstall.pkg
 	hdiutil create -ov -srcfolder uninstall.pkg -srcfolder ccid-installer.pkg -volname "CCID installer ($(CCIDVER))" $@
-	test -z "$(SIGNER)" || codesign -f -s "Developer ID Application: $(SIGNER)" $@
+	test -z "$(SIGNER)" || codesign -f -s "$(SIGNER)" $@
