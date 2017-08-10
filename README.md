@@ -15,7 +15,7 @@
 ## For what using this driver?
 * Problem: MyTokenWallet and MyEtherWallet have some insecure options to generate a cryptowallet
 now I start researching to implement an other 0-Trust option with [NitroKey](https://shop.nitrokey.com/shop/product/nitrokey-pro-3) !
-* This dirver here contain the NitroKey devices, so we can use it on OSX. Nothing else! 
+* This dirver here contain the NitroKey devices, so we can use it on OSX. Nothing else!
 
 ### Easy-to-use (graphical) installer for OSX 10.11 & 10.12
 
@@ -54,7 +54,7 @@ now I start researching to implement an other 0-Trust option with [NitroKey](htt
 
 We switched from money making apple developer id to our own
 MyTokenWallet CA to sign the dmg file our CodeSigning Cert you will find
-here: https://mytokenwallet.com/MTW_CA.cert
+here: https://mytokenwallet.com/Certificates_MTW_CA.cert.cer
 
 #### Because of
 [OSX bugs](http://ludovicrousseau.blogspot.com/2016/04/os-x-el-capitan-and-ccid-driver-upgrades.html)
