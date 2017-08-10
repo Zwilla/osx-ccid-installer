@@ -12,6 +12,11 @@
 * scan.coverity.com/projects
   [![Coverity Scan Build Status](https://scan.coverity.com/projects/2180/badge.svg)](https://scan.coverity.com/projects/libusb-libusb)
 
+## For what using this driver?
+* Problem: MyTokenWallet and MyEtherWallet have some insecure options to generate a cryptowallet
+now I start researching to implement an other 0-Trust option with [NitroKey](https://shop.nitrokey.com/shop/product/nitrokey-pro-3) !
+* This dirver here contain the NitroKey devices, so we can use it on OSX. Nothing else! 
+
 ### Easy-to-use (graphical) installer for OSX 10.11 & 10.12
 
 * To **download a pre-built installer, see
