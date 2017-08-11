@@ -6,6 +6,8 @@ before_deploy:
 - cp ccid-installer.dmg ccid-*.tar.gz output
 deploy:
     provider: releases
+    api_key:
+          secure: PbLmu7pTx267jivwnv8Ol75LdhDVKq6m59LRfSOWSp6v2NGpuPD7v3qX7Inx/dwPL2z+b0jRJ8610UYG4PdqSCxYhiw66ul/BMywJ0wIek86fruhFqD3JdD9ZYrbFOuDoetoawPBTfBVTEyGU+v1HnHReu3bErUwqnsm+MvzZV1c1YNeuVwfTZN0w1v8/ORtrv6rjMgRYF6FNIIs55bu2u6RDjUVw752iyqt+m4sliG7QQgYgax0E9U98eirwhL1yEX830reujRLvyweVvpPFoxYPeuQzvWSTR7/+t9QG7vOtCVNhuJ6MGbOSrr/p2DS923MTRZfZz5vXsjWqBCbLV5tzixdAU6hM6yFNAH3F7kVHndXVlkPvcBDIhCT5wbYQOF1ftmAslx4rJIQ8PwAVzZY1IY8bTRlnhgSG5C1Hc1CLU7zxx/RPBxndyQ5pk9c5xVi4EjEk0hG114OU9T+J36b4YM9YKM83wvVz9VxlYzMk9Zts0PE/gsAzHPORJ/e3d4mTUjNoLAL2baLZKD3Y+Way1nHyupV3Ciy3UfeYEp2Rnt/6cEq01FMcXKYbKX92TeYIUUgDKOzJ812CqSkVZDkp8Zeg0qm3FofAvd0vNCy70LsAEDHZlGFVCu9jpkWY/F+FOcxqyKLSQKbVXbfGfiXzf3MHcADYReb5uXimBM=
     file_glob: true
     file: deploy/*
     skip_cleanup: true
@@ -13,3 +15,4 @@ deploy:
       tags: true
       repo: zwilla/osx-ccid-installer
       all_branches: true
+
