@@ -5,20 +5,11 @@ before_deploy:
 - mkdir -p output
 - cp ccid-installer.dmg ccid-*.tar.gz output
 deploy:
-  - provider: releases
+    provider: releases
     file_glob: true
-    file:
-      - ccid-installer.dmg
-      - ccid-*.tar.gz
+    file: deploy/*
     skip_cleanup: true
     on:
       tags: true
-  - provider: gcs
-    bucket: github-zwilla-builds
-    on:
       repo: zwilla/osx-ccid-installer
       all_branches: true
-    skip_cleanup: true
-    acl: public-read
-    local-dir: output
-    upload-dir: osx-ccid-installer/${TRAVIS_BUILD_NUMBER}
