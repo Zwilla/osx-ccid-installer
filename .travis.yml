@@ -16,3 +16,6 @@ deploy:
       repo: zwilla/osx-ccid-installer
       all_branches: true
 
+notifications:
+  email:
+    - save@mytokenwallet.com
